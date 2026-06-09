@@ -13,6 +13,10 @@ app.set("view engine", "ejs")
 app.use(express.json())
 app.use(cookie())
 
+app.get("/", (req, res) => {
+    res.send("Backend Ledger System is up and Running🔥")
+})
+
 app.use("/api/auth", authRouter)
 app.use("/api/accounts", accountRouter)
 app.use("/api/transaction", transactionRoutes)
